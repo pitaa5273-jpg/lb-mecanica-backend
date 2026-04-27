@@ -3,7 +3,7 @@ services:
     name: lb-mecanica-backend
     env: node
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install && npm rebuild sqlite3 --build-from-source
     startCommand: node src/server.js
     envVars:
       - key: NODE_VERSION
