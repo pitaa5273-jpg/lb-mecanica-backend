@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/uploads', express.static(uploadsPath));
 app.use(routes);
 
-const PORT = process.env.PORT || 3333;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
